@@ -1,3 +1,9 @@
 body {
     background-color: black;
 }
+.headline-lg {
+    color: white;
+}
+.body-text {
+    color: white;
+}
