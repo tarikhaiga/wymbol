@@ -6,10 +6,30 @@
 }
 body {
     background-color: black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .headline-lg {
     color: white;
 }
 .body-text {
     color: white;
+}
+.card {
+  background-color: dodgerblue;
+  color: white;
+  height: 32rem;
+}
+
+.cards {
+  /* max-width: 2000px; */
+  margin: 0 48px;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 1092px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
 }
