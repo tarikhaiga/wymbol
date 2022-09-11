@@ -2,12 +2,17 @@ const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
   <style>
+    footer {
+      display: block;
+    }
     nav {
       height: 60px;
       padding: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+
     }
 
     ul {
@@ -15,7 +20,6 @@ footerTemplate.innerHTML = `
       display: flex;
       flex-direction: row;
       align-items: center;
-
     }
     
     ul li {
@@ -45,6 +49,20 @@ footerTemplate.innerHTML = `
         margin-left: 48px;
     }
 
+    .social-link img {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .nav-link, .social-link {
+        font-size: 14px;
+      }
+      .body-text {
+        padding-top: 56px;
+      }
+    }
+
   </style>
   <footer>
     <nav>
@@ -54,9 +72,7 @@ footerTemplate.innerHTML = `
         <li><a class="nav-link" href="submit.html">Submit Your Work</a></li>
         <li><a class="nav-link" href="about.html">About</a></li>
       </ul>
-      <ul>
       <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
-      </ul>
     </nav>
     <p class="body-text">© 2022 Wymbol – Made in Canada 🇨🇦</p>
   </footer>
@@ -65,11 +81,7 @@ footerTemplate.innerHTML = `
 class Footer extends HTMLElement {
   constructor() {
     super();
-  }
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
-    shadowRoot.appendChild(footerTemplate.content);
+    this.appendChild(footerTemplate.content);
   }
 }
-
 customElements.define('nav-footer', Footer);
