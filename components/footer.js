@@ -5,7 +5,7 @@ footerTemplate.innerHTML = `
     footer {
       display: block;
     }
-    nav {
+    #footer-container {
       height: 60px;
       padding: 24px;
       display: flex;
@@ -65,7 +65,7 @@ footerTemplate.innerHTML = `
 
   </style>
   <footer>
-    <nav>
+    <div id="footer-container">
       <ul>
         <img src="assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
         <li><a class="nav-link" href="index.html">Home</a></li>
@@ -73,7 +73,7 @@ footerTemplate.innerHTML = `
         <li><a class="nav-link" href="about.html">About</a></li>
       </ul>
       <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
-    </nav>
+    </div>
     <p class="body-text">© 2022 Wymbol – Made in Canada 🇨🇦</p>
   </footer>
 `;
