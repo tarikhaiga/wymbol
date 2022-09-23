@@ -2,14 +2,13 @@ const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
   <style>
-  nav {
+    nav {
         height: 60px;
         padding: 24px;
         margin-bottom: 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: purple;
     }
 
     ul {
@@ -64,7 +63,6 @@ headerTemplate.innerHTML = `
             background-color: black;
         }
     }
-
   </style>
   <header>
     <nav>

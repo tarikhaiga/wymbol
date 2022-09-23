@@ -4,15 +4,15 @@ footerTemplate.innerHTML = `
   <style>
     footer {
       display: block;
+      margin-top: 24px;
     }
+
     #footer-container {
       height: 60px;
       padding: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-
     }
 
     ul {
@@ -55,6 +55,10 @@ footerTemplate.innerHTML = `
     }
 
     @media screen and (max-width: 700px) {
+      #footer-container {
+        flex-wrap: wrap;
+        height: 100%;
+      }
       .nav-link, .social-link {
         font-size: 14px;
       }
@@ -62,7 +66,6 @@ footerTemplate.innerHTML = `
         padding-top: 56px;
       }
     }
-
   </style>
   <footer>
     <div id="footer-container">
@@ -74,7 +77,7 @@ footerTemplate.innerHTML = `
       </ul>
       <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
     </div>
-    <p class="body-text">© 2022 Wymbol – Made in Canada 🇨🇦</p>
+    <p class="body-text footer">© 2022 Wymbol – Made while 🚽 </p>
   </footer>
 `;
 
