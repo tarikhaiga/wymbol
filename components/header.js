@@ -78,6 +78,15 @@ headerTemplate.innerHTML = `
     </nav>
   </header>
 `;
+
+/* Overlay entire screen 
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+*/
 class Header extends HTMLElement {
   constructor() {
     super();
