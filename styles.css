@@ -1,21 +1,24 @@
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color: black;
-    margin: 16px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    overflow-x: hidden;
+  background-color: black;
+  margin: 16px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  overflow-x: hidden;
 }
 .headline-lg {
     color: white;
+    margin-bottom: 12px;
 }
 .body-text {
-    color: white;
+  color: white;
+  line-height: 1.3em;
+  max-width: 670px;
 }
 .card {
   background-color: dodgerblue;
@@ -33,18 +36,11 @@ body {
   margin: 0 48px;
   display: grid;
   grid-gap: 2rem;
-  
 }
 
 .card:hover {
   border: 3px solid greenyellow;
 }
-
-/* Screen larger than 600px? 2 column */
-@media (min-width: 1092px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
-}
-
 
 .card a {
   height: 100%;
@@ -55,6 +51,76 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
 }
 
+#container {
+  margin: 48px;
+}
+
+h4 {
+  color: white;
+  margin: 12px 0;
+}
+
+#cc-license {
+  display: block;
+  margin: 12px 0;
+}
+
+#submit-work {
+  color: dodgerblue;
+}
+
+#paragraph-container {
+  margin: 32px 0;
+}
+
+hr {
+  margin: 20px 0;
+  max-width: 670px;
+}
+
+input[type=text],[type=email] {
+  width: 100%;
+  height: 28px;
+  max-width: 400px;
+  padding: 8px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+}
+
+#submit-btn {
+  margin: 12px 0;
+  padding: 12px;
+  width: 100px;
+  max-width: 400px;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color:blue;
+}
+
+form {
+  margin: 16px 0;
+}
+
+.label-text {
+  line-height: 1.5em;
+  color: white;
+}
+/* Screen larger than 600px? 2 column */
+@media (min-width: 1092px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 992px) {
+  #submit-btn {width: 100%;}
+}

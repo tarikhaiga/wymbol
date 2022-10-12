@@ -44,7 +44,7 @@ footerTemplate.innerHTML = `
         margin-left: 20px;
     }
 
-    .body-text {
+    footer .body-text {
         color: white;
         margin-left: 48px;
     }
@@ -62,7 +62,7 @@ footerTemplate.innerHTML = `
       .nav-link, .social-link {
         font-size: 14px;
       }
-      .body-text {
+      footer .body-text {
         padding-top: 56px;
       }
     }
@@ -77,7 +77,7 @@ footerTemplate.innerHTML = `
       </ul>
       <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
     </div>
-    <p class="body-text footer">© 2022 Wymbol – Made while 🚽 </p>
+    <p class="body-text">© 2022 Wymbol – Made while 🚽 </p>
   </footer>
 `;
 
