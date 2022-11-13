@@ -66,14 +66,14 @@ headerTemplate.innerHTML = `
   </style>
   <header>
     <nav>
-        <img src="assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
+        <img src="../assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
         <ul class="topnav" id="myTopnav">
             <li><a class="menu-links" href="index.html">Home</a></li>
             <li><a class="menu-links" href="submit.html">Submit Your Work</a></li>
             <li><a class="menu-links" href="about.html">About</a></li>
         </ul>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <img src="assets/menu-icon.png" alt="menu icon" width="32" height="32">
+            <img src="../assets/menu-icon.png" alt="menu icon" width="32" height="32">
         </a>
     </nav>
   </header>

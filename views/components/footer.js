@@ -70,14 +70,14 @@ footerTemplate.innerHTML = `
   <footer>
     <div id="footer-container">
       <ul>
-        <img src="assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
+        <img src="../assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="submit.html">Submit Your Work</a></li>
         <li><a class="nav-link" href="about.html">About</a></li>
       </ul>
-      <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
+      <a class="social-link" href="https://www.instagram.com/wymbol" target="_blank"><img src="../assets/instagram-white.png" alt="instagram logo" width="24" height="24" style="padding: 8px;"> <span style="color:#fff;">Instagram</span></img></a>
     </div>
-    <p class="body-text">© 2022 Wymbol – Made while 🚽 </p>
+    <p class="body-text">© 2022 Wymbol – Made in 🇨🇦 </p>
   </footer>
 `;
 
