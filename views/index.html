@@ -22,11 +22,10 @@
     <script src="js/lg-thumbnail.min.js"></script>
     <script src="js/lg-fullscreen.min.js"></script>
     <script type="text/javascript">
-        // var allimages = []
-    var allimages = <%- JSON.stringify(allimages) %>
-    var imageBlobs = []
-    document.addEventListener('DOMContentLoaded', function() {
-            function blobify() {
+        var allimages = <%- JSON.stringify(allimages) %>
+        var imageBlobs = []
+     
+        function blobify() {
             for (i = 0; i < allimages.length; i++){
                 const myRequest = new Request(allimages[i]);
                 fetch(myRequest)
@@ -61,18 +60,14 @@
           }
         }
         insertURL();
-        }, "1000")
+        }, "2000")
 
         setTimeout(() => {
             lightGallery(document.getElementById('lightgallery'), {
             selector: '.card',
         });
-        }, "1600")
-
-    }, false);
-        
+        }, "2500")
     </script>
-    <script src="main.js"></script>
     <nav-footer></nav-footer>
 </body>
 </html>
