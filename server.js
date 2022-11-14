@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 var ImageKit = require("imagekit");
-require('dotenv').config()
+require('dotenv').config();
+const PORT = process.env.PORT || 3000;
 
 var imagekit = new ImageKit({
   urlEndpoint: process.env.urlEndpoint,
@@ -47,6 +48,6 @@ app.get("/contact", (req, res, next) => {
 
 app.use(express.static('views'));
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('server started');
 });
