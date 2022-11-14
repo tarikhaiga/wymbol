@@ -23,10 +23,10 @@
     <script src="js/lg-fullscreen.min.js"></script>
     <script type="text/javascript">
         // var allimages = []
-        var allimages = <%- JSON.stringify(allimages) %>
-        var imageBlobs = []
-
-        function blobify() {
+    var allimages = <%- JSON.stringify(allimages) %>
+    var imageBlobs = []
+    document.addEventListener('DOMContentLoaded', function() {
+            function blobify() {
             for (i = 0; i < allimages.length; i++){
                 const myRequest = new Request(allimages[i]);
                 fetch(myRequest)
@@ -68,6 +68,9 @@
             selector: '.card',
         });
         }, "1600")
+
+    }, false);
+        
     </script>
     <script src="main.js"></script>
     <nav-footer></nav-footer>
