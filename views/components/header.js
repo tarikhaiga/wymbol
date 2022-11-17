@@ -48,6 +48,9 @@ headerTemplate.innerHTML = `
     }
 
     @media screen and (max-width: 600px) {
+        nav {
+            padding: 0px;
+        }
         .topnav.mobile li {
             display: block;
             padding: 12px;
@@ -66,7 +69,9 @@ headerTemplate.innerHTML = `
   </style>
   <header>
     <nav>
-        <img src="../assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
+        <a href="/">
+            <img id="w-logo" src="../assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
+        </a>
         <ul class="topnav" id="myTopnav">
             <li><a class="menu-links" href="index.html">Home</a></li>
             <li><a class="menu-links" href="submit.html">Submit Your Work</a></li>

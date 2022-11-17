@@ -14,7 +14,7 @@ var allimages = [];
 
 //change to format = JPG and PNG
 
-imagekit.listFiles({ searchQuery: 'format="jpg"'}, function(error, result) {
+imagekit.listFiles({ fileType: 'image'}, function(error, result) {
     if (error) console.log(error);
     else
         for (i = 0; i < result.length; i++) {

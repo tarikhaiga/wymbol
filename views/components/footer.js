@@ -15,7 +15,7 @@ footerTemplate.innerHTML = `
       justify-content: space-between;
     }
 
-    ul {
+    #footer-links {
       padding: 0;
       display: flex;
       flex-direction: row;
@@ -54,10 +54,11 @@ footerTemplate.innerHTML = `
       height: 32px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media (min-width:501px) and (max-width:700px) {
       #footer-container {
         flex-wrap: wrap;
         height: 100%;
+        padding: 0;
       }
       .nav-link, .social-link {
         font-size: 14px;
@@ -66,10 +67,36 @@ footerTemplate.innerHTML = `
         padding-top: 56px;
       }
     }
+
+    @media screen and (max-width: 500px) {
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #footer-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+      }
+      #footer-links {
+        display: flex;
+        flex-direction: column;
+      }
+      footer ul li {
+        margin: 16px;
+      }
+      .social-link {
+        margin: 24px;
+      }
+    }
+  
   </style>
   <footer>
     <div id="footer-container">
-      <ul>
+      <ul id="footer-links">
         <img src="../assets/wymbol v2@2x.png" alt="wymbol logo" width="95.52" height="66.72">
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="submit.html">Submit Your Work</a></li>
