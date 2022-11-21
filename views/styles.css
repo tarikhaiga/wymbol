@@ -7,8 +7,6 @@
 body {
   background-color: black;
   margin: 16px;
-  /* display: flex; */
-  /* flex-direction: column; */
   overflow-x: hidden;
 }
 .headline-lg {
@@ -25,10 +23,6 @@ body {
   color: white;
   height: 32rem;
   display: flex;
-  /* justify-content: center;
-  align-items: center;
-  overflow: hidden; */
-  /* max-width: 24rem; */
 }
 
 .cards {
@@ -116,6 +110,18 @@ form {
   line-height: 1.5em;
   color: white;
 }
+
+#preloader {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  height: calc(100vh - 250px);
+}
+
+#spinner {
+  height: 3vh;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (min-width: 1092px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
@@ -137,4 +143,5 @@ form {
   #lightgallery {margin: 0;}
   #submit-btn {width: 100%;}
   #container {margin: 12px;}
+  #preloader {padding: 50%;}
 }
