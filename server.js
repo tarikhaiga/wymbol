@@ -11,16 +11,12 @@ var imagekit = new ImageKit({
 });
 
 var allimages = [];
-
-//change to format = JPG and PNG
-
 imagekit.listFiles({ fileType: 'image'}, function(error, result) {
     if (error) console.log(error);
     else
         for (i = 0; i < result.length; i++) {
             allimages.push(result[i].url);
         }       
-    console.log(allimages);
 });
 
 app.set('view engine', 'html');
@@ -33,17 +29,14 @@ app.get("/", (req, res, next) => {
 
 app.get("/index.html", (req, res, next) => {
     res.redirect('/')
-  //   next();
 })
 
 app.get("/submit", (req, res, next) => {
     res.render("submit")
-    // next();
 })
 
 app.get("/contact", (req, res, next) => {
     res.render("contact")
-    // next();
 })
 
 app.use(express.static('views'));
