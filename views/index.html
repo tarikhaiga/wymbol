@@ -12,6 +12,9 @@
 </head>
 <body>
     <nav-header id="navHeader"></nav-header>
+    <div id="preloader">
+        <img id="spinner" src="images/loading.gif">
+    </div>
     <div id="lightgallery" class="cards"></div>
     <script src="js/lightgallery.min.js"></script>
     <!-- lightgallery plugins -->
@@ -21,56 +24,42 @@
     </script>
     <script defer type="text/javascript">
         var allimages = <%- JSON.stringify(allimages) %>
-        var imageBlobs = []
-     
-        function blobify() {
+        // var imageBlobs = []
+        
+        async function fnAsync(e) {
             for (i = 0; i < allimages.length; i++){
-                const myRequest = new Request(allimages[i]);
-                fetch(myRequest)
-                .then((response) => response.blob())
-                .then((myBlob) => {
-                    const objectURL = URL.createObjectURL(myBlob);
-                    imageBlobs.push(objectURL);
-                });
-            }
-        }
-        blobify();
-        window.onload = function (event) {
-            setTimeout(() => {
-                document.getElementById("preloader").style.display = "none";
-            }, 2300);
-        };
-    </script>
-    <script type="text/javascript">
-        setTimeout(() => {
-            function insertURL() {
-                for (i = 0; i < imageBlobs.length; i++) {
-                    const div = document.createElement("div");
-                    div.className = "card";
-                    div.setAttribute("data-src", imageBlobs[i]);
-                    document.getElementById("lightgallery").appendChild(div);
+                const file = await fetch(allimages[i]);
+                const blob = await file.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                // imageBlobs.push(objectURL);
 
-                    const anchor = document.createElement("a");
-                    anchor.className = "img-link";
-                    anchor.href = imageBlobs[i];
-                    const divList = document.querySelectorAll('.card');
-                    divList[i].appendChild(anchor);
+                const div = document.createElement("div");
+                div.className = "card";
+                div.setAttribute("data-src", blobUrl);
+                document.getElementById("lightgallery").appendChild(div);
 
-                    const img = document.createElement("img");
-                    img.src = imageBlobs[i];
-                    const anchorList = document.querySelectorAll('.img-link');
-                    anchorList[i].appendChild(img);
-                }
-            }
-            insertURL();
+                const anchor = document.createElement("a");
+                anchor.className = "img-link";
+                anchor.href = blobUrl;
+                const divList = document.querySelectorAll('.card');
+                divList[i].appendChild(anchor);
+
+                const img = document.createElement("img");
+                img.src = blobUrl;
+                const anchorList = document.querySelectorAll('.img-link');
+                anchorList[i].appendChild(img);
+            };
             lightGallery(document.getElementById('lightgallery'), {
                 selector: '.card',
             });
-        }, 2850);
+        }
+        fnAsync();
+        window.onload = function (event) {
+            setTimeout(() => {
+                document.getElementById("preloader").style.display = "none";
+            }, 666);
+        };
     </script>
-    <div id="preloader">
-        <img id="spinner" src="images/loading.gif">
-    </div>
     <nav-footer></nav-footer>
 </body>
 </html>

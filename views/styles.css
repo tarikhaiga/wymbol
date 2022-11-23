@@ -115,7 +115,7 @@ form {
   display: flex;
   justify-content: center;
   padding: 10%;
-  height: calc(100vh - 250px);
+  height: 100vh;
 }
 
 #spinner {
