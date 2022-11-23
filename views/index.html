@@ -24,6 +24,7 @@
     </script>
     <script defer type="text/javascript">
         var allimages = <%- JSON.stringify(allimages) %>
+        var arrayLength = allimages.length;
         // var imageBlobs = []
         
         async function fnAsync(e) {
@@ -48,16 +49,19 @@
                 img.src = blobUrl;
                 const anchorList = document.querySelectorAll('.img-link');
                 anchorList[i].appendChild(img);
+
+                if (i == arrayLength-1) {
+                    lightGallery(document.getElementById('lightgallery'), {
+                        selector: '.card',
+                    });
+                };
             };
-            lightGallery(document.getElementById('lightgallery'), {
-                selector: '.card',
-            });
         }
         fnAsync();
         window.onload = function (event) {
             setTimeout(() => {
                 document.getElementById("preloader").style.display = "none";
-            }, 666);
+            }, 750);
         };
     </script>
     <nav-footer></nav-footer>
